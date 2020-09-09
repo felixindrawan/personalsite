@@ -8,13 +8,6 @@
   justify-items: center;
 }
 
-.company-logo{
-  width: 80%;
-  height: auto;
-
-  align-self: center;
-}
-
 .text-emphasis{
   color: #759EFF;
 }
@@ -32,7 +25,7 @@ button{
 }
 
 .company-c-logo{
-  max-width: 10rem;
+  width: 10rem;
   height: auto;
   margin: auto 1.5rem;
 }
