@@ -14,6 +14,7 @@ import './styles.css';
  * @param {String} props.companyLogo The logo of the company
  * @param {String} props.companyName The name of the company
  * @param {String} props.positionInfo The responsibility of the position
+ * @param {String} props.positionDesc The description of the position
  *
  * @example
  * return(
@@ -22,11 +23,18 @@ import './styles.css';
  *     companyLogo=''
  *     companyName=''
  *     positionInfo=''
+ *     positionDesc=''
  *   />
  * )
  */
 
-const CompanyInfoComponent = ({ onClick, companyLogo, companyName, positionInfo }) => {
+const CompanyInfoComponent = ({
+  onClick,
+  companyLogo,
+  companyName,
+  positionInfo,
+  positionDesc,
+}) => {
   const isMediumScreen = useMediaQuery('(max-width:960px)');
   const isSmallScreen = useMediaQuery('(max-width:600px)');
 
@@ -48,7 +56,7 @@ const CompanyInfoComponent = ({ onClick, companyLogo, companyName, positionInfo 
   return (
     <Box className="info-box" my={2} {...boxProps}>
       <button type="button" onClick={onClick}>
-        <Grid container alignItems="center" justify="center">
+        <Grid container className="grid-work-info">
           <Grid container item md={4} xm={12} alignItems="center" justify="center">
             <img className="company-c-logo" src={companyLogo} alt={companyName} />
           </Grid>
@@ -68,7 +76,7 @@ const CompanyInfoComponent = ({ onClick, companyLogo, companyName, positionInfo 
             </Grid>
             <Grid item>
               <Typography className="text-under" {...subtextProps}>
-                <Box fontWeight="300">Skills</Box>
+                <Box fontWeight="300">{positionDesc}</Box>
               </Typography>
             </Grid>
             <Grid item>
@@ -88,6 +96,7 @@ CompanyInfoComponent.propTypes = {
   companyLogo: PropTypes.string.isRequired,
   companyName: PropTypes.string.isRequired,
   positionInfo: PropTypes.string.isRequired,
+  positionDesc: PropTypes.string.isRequired,
 };
 
 export default CompanyInfoComponent;

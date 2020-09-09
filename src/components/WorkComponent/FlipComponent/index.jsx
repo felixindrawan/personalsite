@@ -38,6 +38,7 @@ const FlipComponent = ({ work }) => {
         companyLogo={work.logo}
         companyName={work.name}
         positionTitle={work.title}
+        positionDesc={work.desc}
         positionInfo={work.info}
       />
     </ReactCardFlip>
@@ -51,6 +52,7 @@ FlipComponent.propTypes = {
     location: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     duration: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
     info: PropTypes.string.isRequired,
   }).isRequired,
 };

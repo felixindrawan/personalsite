@@ -5,6 +5,7 @@ import WelcomeComponent from '../WelcomeComponent';
 import AboutComponent from '../AboutComponent';
 import WorkComponent from '../WorkComponent';
 import ContactComponent from '../ContactComponent';
+import ProjectComponent from '../ProjectComponent';
 
 import './styles.css';
 
@@ -27,6 +28,9 @@ const MainComponent = () => (
     </div>
     <div id="work">
       <WorkComponent />
+    </div>
+    <div id="projects">
+      <ProjectComponent />
     </div>
     <div id="contact">
       <ContactComponent />
