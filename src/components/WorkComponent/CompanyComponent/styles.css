@@ -1,0 +1,53 @@
+.info-box{
+  box-shadow: 0.175rem 0.175rem 1rem 0 #9B9B9B;
+  border-radius: 0.7rem;
+  min-height: 10rem;
+  width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.text-emphasis{
+  color: #759EFF;
+}
+
+.text-under{
+  color: #9B9B9B;
+}
+
+.company-c-logo{
+  max-width: 25rem;
+  height: auto;
+  margin: auto 1.5rem;
+}
+
+button{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: inherit;
+  outline: none;
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 960px) {
+  .company-c-logo{
+    width: 15rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .company-c-logo{
+    width: 15rem;
+    margin-bottom: 0.5rem;
+  }
+}
