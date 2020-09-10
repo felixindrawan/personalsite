@@ -57,8 +57,8 @@ const CompanyInfoComponent = ({
   };
 
   return (
-    <Box className="info-box" my={2} {...boxProps}>
-      <button type="button" onClick={onClick}>
+    <button type="button" onClick={onClick}>
+      <Box className="info-box" my={2} {...boxProps}>
         <Grid container className="grid-work-info" style={{ ...minWidthPropsGrid }}>
           <Grid
             className="company-ci-logo-gird"
@@ -97,8 +97,8 @@ const CompanyInfoComponent = ({
             </Grid>
           </Grid>
         </Grid>
-      </button>
-    </Box>
+      </Box>
+    </button>
   );
 };
 
