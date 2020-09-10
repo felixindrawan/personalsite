@@ -3,8 +3,8 @@ import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 
 import FlipComponent from './FlipComponent';
-import pinnacleLogo from '../../assets/pinnacle-logo-shadow.png';
-import logicsLogo from '../../assets/logics-academy-shadow.png';
+import pinnacleLogo from '../../assets/WorkAssets/pinnacle-logo-shadow.png';
+import logicsLogo from '../../assets/WorkAssets/logics-academy-shadow.png';
 
 import './styles.css';
 

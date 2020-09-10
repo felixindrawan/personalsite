@@ -52,13 +52,24 @@ const CompanyInfoComponent = ({
   const boxProps = {
     p: isSmallScreen ? 0 : 2,
   };
+  const minWidthPropsGrid = {
+    minWidth: isMediumScreen || isSmallScreen ? '0rem' : '40rem',
+  };
 
   return (
     <Box className="info-box" my={2} {...boxProps}>
       <button type="button" onClick={onClick}>
-        <Grid container className="grid-work-info">
-          <Grid container item md={4} xm={12} alignItems="center" justify="center">
-            <img className="company-c-logo" src={companyLogo} alt={companyName} />
+        <Grid container className="grid-work-info" style={{ ...minWidthPropsGrid }}>
+          <Grid
+            className="company-ci-logo-gird"
+            container
+            item
+            md={4}
+            xm={12}
+            alignItems="center"
+            justify="center"
+          >
+            <img className="company-ci-logo" src={companyLogo} alt={companyName} />
           </Grid>
           <Grid
             container

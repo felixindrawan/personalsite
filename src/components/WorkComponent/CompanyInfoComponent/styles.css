@@ -28,10 +28,14 @@ button{
   outline: none;
 }
 
-.company-c-logo{
+.company-ci-logo{
   width: 10rem;
   height: auto;
-  margin: auto 1.5rem;
+  margin: auto 1rem;
+}
+
+.company-ci-logo-gird{
+  width: 10rem;
 }
 
 button:active {
@@ -43,14 +47,14 @@ button:hover {
 }
 
 @media (max-width: 960px) {
-  .company-c-logo{
+  .company-ci-logo{
     width: 15rem;
     margin-bottom: 0.5rem;
   }
 }
 
 @media (max-width: 600px) {
-  .company-c-logo{
+  .company-ci-logo{
     width: 15rem;
     margin-bottom: 0.5rem;
   }
