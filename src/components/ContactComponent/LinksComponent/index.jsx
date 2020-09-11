@@ -29,7 +29,13 @@ const LinksComponent = ({ link, category, iconComponent, handleHover }) => {
     <Grid item className="grid-link">
       <Box alignItems="center" display="inline-flex" m={1}>
         {iconComponent}
-        <Link rel="noopener noreferrer" target="_blank" href={link} onMouseEnter={handleHover}>
+        <Link
+          rel="noopener noreferrer"
+          target="_blank"
+          href={link}
+          onMouseEnter={handleHover}
+          style={{ textDecorationColor: '#000000' }}
+        >
           <Typography variant="h5">
             <Box fontWeight="300" color="#000000">
               {category}
