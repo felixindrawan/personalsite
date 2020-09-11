@@ -27,7 +27,7 @@ const WorkComponent = () => {
       title: 'Web Developer',
       desc: 'Feature design & Unit/E2E testing',
       duration: 'Summer 2020',
-      info: 'React, Redux, PHP, Jest & Enzyme, Cypress',
+      info: 'React, Redux, PHP, Jest, Cypress',
     },
     {
       key: 1,
