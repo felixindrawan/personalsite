@@ -1,0 +1,12 @@
+.navbar-main {
+  min-height: 4rem;
+  width: 100vw;
+  background-color: #FAFAFD;
+  z-index: 1;
+  padding: 0.5rem;
+  box-shadow: 0 1rem 1rem 0 #9B9B9B;
+};
+
+.text-emphasis {
+  color: #759EFF;
+}

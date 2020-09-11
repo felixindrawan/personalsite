@@ -59,12 +59,19 @@ const ProjectComponent = () => {
       skill: 'Android Studio, Java',
       type: 'Personal',
       time: '2019',
-      styles: { backgroundColor: '#333333' },
+      bgColor: '#333333',
     },
   ];
 
   return (
-    <Grid className="project-page" container spacing={0} alignItems="center" justify="center">
+    <Grid
+      id="projects"
+      className="project-page"
+      container
+      spacing={0}
+      alignItems="center"
+      justify="center"
+    >
       <Grid container>
         <Grid item md={12} xs={12}>
           <Typography className="text-title" align="center" variant="h4">

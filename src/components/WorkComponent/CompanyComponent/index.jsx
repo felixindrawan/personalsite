@@ -50,7 +50,7 @@ const CompanyComponent = ({
     align: isMediumScreen || isSmallScreen ? 'center' : 'left',
   };
   const textAlign = {
-    alignItems: isMediumScreen || isSmallScreen ? 'center' : 'left',
+    alignItems: isMediumScreen || isSmallScreen ? 'center' : 'flex-start',
   };
   const boxProps = {
     p: isSmallScreen ? 0 : 2,

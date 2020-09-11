@@ -42,7 +42,14 @@ const WorkComponent = () => {
   ];
 
   return (
-    <Grid className="work-page" container spacing={0} alignItems="center" justify="center">
+    <Grid
+      id="work"
+      className="work-page"
+      container
+      spacing={0}
+      alignItems="center"
+      justify="center"
+    >
       <Grid container>
         <Grid item md={12} xs={12}>
           <Typography className="text-title" align="center" variant="h4">

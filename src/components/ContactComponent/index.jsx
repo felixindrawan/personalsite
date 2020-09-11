@@ -91,7 +91,14 @@ const ContactComponent = () => {
   };
 
   return (
-    <Grid className="contact-page" container spacing={0} alignItems="center" justify="center">
+    <Grid
+      id="contacts"
+      className="contact-page"
+      container
+      spacing={0}
+      alignItems="center"
+      justify="center"
+    >
       <Grid container>
         <Grid item md={12} xs={12}>
           <Box mb={2}>

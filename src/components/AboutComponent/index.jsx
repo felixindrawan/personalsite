@@ -29,7 +29,14 @@ const AboutComponent = () => {
   };
 
   return (
-    <Grid className="about-page" container spacing={0} alignItems="center" justify="center">
+    <Grid
+      id="about"
+      className="about-page"
+      container
+      spacing={0}
+      alignItems="center"
+      justify="center"
+    >
       <Grid container>
         <Grid item md={12} xs={12}>
           <Typography className="text-title" align="center" variant="h4">

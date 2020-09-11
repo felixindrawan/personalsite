@@ -19,7 +19,7 @@ import './styles.css';
  * @param {String} props.projectSkills The technologies used on the project
  * @param {String} props.projectType What the project was made for
  * @param {String} props.projectTime When the project was made
- * @param {String} props.imgStyle Background if needed for android apps
+ * @param {String} props.backgroundColorP Background if needed for android apps
  * @param {string} props.githubLink The github link for the project
  *
  * @example
@@ -32,7 +32,7 @@ import './styles.css';
  *     projectSkills=''
  *     projectType=''
  *     projectTime=''
- *     imgStyle=''
+ *     backgroundColorP=''
  *     githubLink='',
  *   />
  * )
@@ -46,7 +46,7 @@ const ProjectFrontComponent = ({
   projectSkills,
   projectType,
   projectTime,
-  imgStyle,
+  backgroundColorP,
   githubLink,
 }) => {
   const isMediumScreen = useMediaQuery('(max-width:960px)');
@@ -55,7 +55,7 @@ const ProjectFrontComponent = ({
   const textProps = {
     variant: isMediumScreen || isSmallScreen ? 'h5' : 'h4',
     align: isMediumScreen || isSmallScreen ? 'center' : 'left',
-    justify: isSmallScreen ?? 'center',
+    justify: isSmallScreen ? 'center' : 'flex-start',
   };
   const subtextProps = {
     variant: isMediumScreen || isSmallScreen ? 'subtitle1' : 'h6',
@@ -115,7 +115,7 @@ const ProjectFrontComponent = ({
               className="project-logo"
               src={projectLogo}
               alt={projectName}
-              style={{ ...imgStyle }}
+              style={{ backgroundColor: backgroundColorP }}
             />
           </Grid>
           <Grid item xs={12}>
@@ -146,14 +146,12 @@ ProjectFrontComponent.propTypes = {
   projectSkills: PropTypes.string.isRequired,
   projectType: PropTypes.string.isRequired,
   projectTime: PropTypes.string.isRequired,
-  imgStyle: {
-    backgroudnColor: PropTypes.string,
-  },
+  backgroundColorP: PropTypes.string,
   githubLink: PropTypes.string.isRequired,
 };
 
 ProjectFrontComponent.defaultProps = {
-  imgStyle: { backgroundColor: '' },
+  backgroundColorP: 'transparent',
 };
 
 export default ProjectFrontComponent;

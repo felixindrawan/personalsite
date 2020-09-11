@@ -19,7 +19,7 @@ import './styles.css';
  * @param {String} props.projectDesc Brief description of project
  * @param {String} props.projectType What the project was made for
  * @param {String} props.projectTime When the project was made
- * @param {String} props.imgStyle Background if needed for android apps
+ * @param {String} props.backgroundColorP Background if needed for android apps
  * @param {string} props.githubLink The github link for the project
  *
  * @example
@@ -30,7 +30,7 @@ import './styles.css';
  *     projectName=''
  *     projectLink=''
  *     projectDesc=''
- *     imgStyle=''
+ *     backgroundColorP=''
  *     githubLink='',
  *   />
  * )
@@ -42,7 +42,7 @@ const ProjectBackComponent = ({
   projectName,
   projectLink,
   projectDesc,
-  imgStyle,
+  backgroundColorP,
   githubLink,
 }) => {
   const isMediumScreen = useMediaQuery('(max-width:960px)');
@@ -51,7 +51,7 @@ const ProjectBackComponent = ({
   const textProps = {
     variant: isMediumScreen || isSmallScreen ? 'h5' : 'h4',
     align: isMediumScreen || isSmallScreen ? 'center' : 'left',
-    justify: isSmallScreen ?? 'center',
+    justify: isSmallScreen ? 'center' : 'flex-start',
   };
   const subtextProps = {
     variant: isMediumScreen || isSmallScreen ? 'subtitle1' : 'h6',
@@ -112,7 +112,7 @@ const ProjectBackComponent = ({
               className="project-logo"
               src={projectLogo}
               alt={projectName}
-              style={{ ...imgStyle }}
+              style={{ backgroundColor: backgroundColorP }}
             />
           </Grid>
           <Grid item xs={12} container justify="center">
@@ -134,14 +134,12 @@ ProjectBackComponent.propTypes = {
   projectName: PropTypes.string.isRequired,
   projectLink: PropTypes.string.isRequired,
   projectDesc: PropTypes.string.isRequired,
-  imgStyle: {
-    backgroudnColor: PropTypes.string,
-  },
+  backgroundColorP: PropTypes.string,
   githubLink: PropTypes.string.isRequired,
 };
 
 ProjectBackComponent.defaultProps = {
-  imgStyle: { backgroundColor: '' },
+  backgroundColorP: 'transparent',
 };
 
 export default ProjectBackComponent;

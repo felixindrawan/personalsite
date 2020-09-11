@@ -14,7 +14,14 @@ import './styles.css';
  */
 
 const WelcomeComponent = () => (
-  <Grid className="welcome-grid" container spacing={0} alignItems="center" justify="center">
+  <Grid
+    id="home"
+    className="welcome-grid"
+    container
+    spacing={0}
+    alignItems="center"
+    justify="center"
+  >
     <div className="text">
       <Typography className="text-inside" align="center" variant="h2">
         Hi, I'm&nbsp;

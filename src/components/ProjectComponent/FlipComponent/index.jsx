@@ -32,7 +32,7 @@ const FlipComponent = ({ project }) => {
         projectSkills={project.skill}
         projectType={project.type}
         projectTime={project.time}
-        imgStyle={project.styles}
+        backgroundColorP={project.bgColor}
         githubLink={project.github}
       />
 
@@ -44,7 +44,7 @@ const FlipComponent = ({ project }) => {
         projectDesc={project.desc}
         projectType={project.type}
         projectTime={project.time}
-        imgStyle={project.styles}
+        backgroundColorP={project.bgColor}
         githubLink={project.github}
       />
     </ReactCardFlip>
@@ -58,14 +58,11 @@ FlipComponent.propTypes = {
     imageBack: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     github: PropTypes.string.isRequired,
-    projectSkillstype: PropTypes.string.isRequired,
     time: PropTypes.string.isRequired,
     skill: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
-    styles: PropTypes.shape({
-      backgroundColor: PropTypes.string,
-    }),
+    bgColor: PropTypes.string,
   }).isRequired,
 };
 

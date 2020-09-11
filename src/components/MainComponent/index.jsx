@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import WelcomeComponent from '../WelcomeComponent';
+import NavBarComponent from '../NavBarComponent';
 import AboutComponent from '../AboutComponent';
 import WorkComponent from '../WorkComponent';
 import ContactComponent from '../ContactComponent';
@@ -17,24 +18,40 @@ import './styles.css';
  * )
  */
 
-const MainComponent = () => (
-  <>
-    <div id="home">
+const MainComponent = () => {
+  const [isSticky, setSticky] = useState(false);
+  const ref = useRef(null);
+  const handleScroll = () => {
+    if (ref.current) {
+      setSticky(ref.current.getBoundingClientRect().top <= 0);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', () => handleScroll);
+    };
+  }, []);
+
+  return (
+    <>
       <WelcomeComponent />
-    </div>
-    <div id="about">
+
+      <div className={`sticky-wrapper${isSticky ? ' sticky' : ''}`} ref={ref}>
+        <NavBarComponent />
+      </div>
+
       <AboutComponent />
-    </div>
-    <div id="work">
+
       <WorkComponent />
-    </div>
-    <div id="projects">
+
       <ProjectComponent />
-    </div>
-    <div id="contact">
+
       <ContactComponent />
-    </div>
-  </>
-);
+    </>
+  );
+};
 
 export default MainComponent;
