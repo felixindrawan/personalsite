@@ -24,6 +24,8 @@ const InfoComponent = () => {
   };
   const marginProps = {
     justify: isMediumScreen || isSmallScreen ? 'center' : 'left',
+    boxShadow: '0.175rem 0.175rem 1rem 0 #9B9B9B',
+    borderRadius: '0.7rem',
   };
 
   return (
