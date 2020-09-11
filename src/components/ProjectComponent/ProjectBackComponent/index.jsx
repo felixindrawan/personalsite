@@ -16,7 +16,7 @@ import './styles.css';
  * @param {String} props.projectLogo The logo of the project
  * @param {String} props.projectName The name of the project
  * @param {String} props.projectLink The link/site of the project
- * @param {String} props.projectSkills The technologies used on the project
+ * @param {String} props.projectDesc Brief description of project
  * @param {String} props.projectType What the project was made for
  * @param {String} props.projectTime When the project was made
  * @param {String} props.imgStyle Background if needed for android apps
@@ -24,28 +24,24 @@ import './styles.css';
  *
  * @example
  * return(
- *   <ProjectFrontComponent
+ *   <ProjectBackComponent
  *     onClick={() => {}}
  *     projectLogo=''
  *     projectName=''
  *     projectLink=''
- *     projectSkills=''
- *     projectType=''
- *     projectTime=''
+ *     projectDesc=''
  *     imgStyle=''
  *     githubLink='',
  *   />
  * )
  */
 
-const ProjectFrontComponent = ({
+const ProjectBackComponent = ({
   onClick,
   projectLogo,
   projectName,
   projectLink,
-  projectSkills,
-  projectType,
-  projectTime,
+  projectDesc,
   imgStyle,
   githubLink,
 }) => {
@@ -76,6 +72,7 @@ const ProjectFrontComponent = ({
     margin: isSmallScreen ? '0.5rem 0.5rem 0 0.5rem' : '',
   };
   const widthBox = isSmallScreen ? '20rem' : '25rem';
+  const descriptionWidth = isMediumScreen || isSmallScreen ? '18rem' : '20rem';
 
   return (
     <button type="button" onClick={onClick}>
@@ -118,18 +115,11 @@ const ProjectFrontComponent = ({
               style={{ ...imgStyle }}
             />
           </Grid>
-          <Grid item xs={12}>
-            <Typography className="text-under" {...subtextProps}>
-              <Box fontWeight={300}>
-                {projectType}
-                ,&nbsp;
-                <span className="text-emphasis">{projectTime}</span>
-              </Box>
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} container justify="center">
             <Typography className="text-emphasis" {...subtextProps}>
-              <Box fontWeight={300}>{projectSkills}</Box>
+              <Box fontWeight={300} maxWidth={descriptionWidth}>
+                {projectDesc}
+              </Box>
             </Typography>
           </Grid>
         </Grid>
@@ -138,22 +128,20 @@ const ProjectFrontComponent = ({
   );
 };
 
-ProjectFrontComponent.propTypes = {
+ProjectBackComponent.propTypes = {
   onClick: PropTypes.func.isRequired,
   projectLogo: PropTypes.string.isRequired,
   projectName: PropTypes.string.isRequired,
   projectLink: PropTypes.string.isRequired,
-  projectSkills: PropTypes.string.isRequired,
-  projectType: PropTypes.string.isRequired,
-  projectTime: PropTypes.string.isRequired,
+  projectDesc: PropTypes.string.isRequired,
   imgStyle: {
     backgroudnColor: PropTypes.string,
   },
   githubLink: PropTypes.string.isRequired,
 };
 
-ProjectFrontComponent.defaultProps = {
+ProjectBackComponent.defaultProps = {
   imgStyle: { backgroundColor: '' },
 };
 
-export default ProjectFrontComponent;
+export default ProjectBackComponent;

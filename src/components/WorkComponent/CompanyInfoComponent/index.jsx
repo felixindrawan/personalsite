@@ -7,7 +7,7 @@ import { Grid, Typography, Box, useMediaQuery } from '@material-ui/core';
 import './styles.css';
 
 /**
- * Component to store about information
+ * Component to store company information
  *
  * @param {Object} props
  * @param {Function} props.onClick Flip function for this component
@@ -18,7 +18,7 @@ import './styles.css';
  *
  * @example
  * return(
- *   <InfoComponent
+ *   <CompanyInfoComponent
  *     onClick={() => {}}
  *     companyLogo=''
  *     companyName=''
@@ -55,6 +55,9 @@ const CompanyInfoComponent = ({
   const minWidthPropsGrid = {
     minWidth: isMediumScreen || isSmallScreen ? '0rem' : '40rem',
   };
+  const marginLeftProps = {
+    marginLeft: isMediumScreen || isSmallScreen ? '' : '1rem',
+  };
 
   return (
     <button type="button" onClick={onClick}>
@@ -64,7 +67,7 @@ const CompanyInfoComponent = ({
             className="company-ci-logo-gird"
             container
             item
-            md={4}
+            md={3}
             xm={12}
             alignItems="center"
             justify="center"
@@ -74,23 +77,24 @@ const CompanyInfoComponent = ({
           <Grid
             container
             item
-            md={8}
+            className="grid-work-text"
+            md={9}
             xm={12}
             direction="column"
-            alignItems={textAlign}
             justify="center"
+            {...textAlign}
           >
-            <Grid item>
+            <Grid item style={{ ...marginLeftProps }}>
               <Typography {...textProps}>
                 <Box fontWeight="300">{companyName}</Box>
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item style={{ ...marginLeftProps }}>
               <Typography className="text-under" {...subtextProps}>
                 <Box fontWeight="300">{positionDesc}</Box>
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item style={{ ...marginLeftProps }}>
               <Typography className="text-emphasis" {...subtextProps}>
                 <Box fontWeight="300">{positionInfo}</Box>
               </Typography>

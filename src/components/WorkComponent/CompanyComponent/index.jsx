@@ -7,7 +7,7 @@ import { Grid, Typography, Box, useMediaQuery } from '@material-ui/core';
 import './styles.css';
 
 /**
- * Component to store about information
+ * Component to store company information
  *
  * @param {Object} props
  * @param {Function} props.onClick Flip function for this component
@@ -19,7 +19,7 @@ import './styles.css';
  *
  * @example
  * return(
- *   <InfoComponent
+ *   <CompanyComponent
  *     onClick={() => {}}
  *     companyLogo=''
  *     companyName=''
@@ -58,34 +58,37 @@ const CompanyComponent = ({
   const minWidthPropsGrid = {
     minWidth: isMediumScreen || isSmallScreen ? '0rem' : '40rem',
   };
+  const marginLeftProps = {
+    marginLeft: isMediumScreen || isSmallScreen ? '0rem' : '1rem',
+  };
 
   return (
     <button type="button" onClick={onClick}>
       <Box className="info-box" my={2} {...boxProps}>
         <Grid container className="grid-work-info" style={{ ...minWidthPropsGrid }}>
-          <Grid container item md={4} xm={12} alignItems="center" justify="center">
-            <img className="company-c-logo" src={companyLogo} alt={companyName} />
-          </Grid>
           <Grid
             container
+            className="company-logo-grid"
             item
-            md={8}
+            md={3}
             xm={12}
-            direction="column"
-            alignItems={textAlign}
+            alignItems="center"
             justify="center"
           >
-            <Grid item>
+            <img className="company-c-logo" src={companyLogo} alt={companyName} />
+          </Grid>
+          <Grid container item md={9} xm={12} direction="column" justify="center" {...textAlign}>
+            <Grid item style={{ ...marginLeftProps }}>
               <Typography {...textProps}>
                 <Box fontWeight="300">{companyName}</Box>
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item style={{ ...marginLeftProps }}>
               <Typography className="text-under" {...subtextProps}>
                 <Box fontWeight="300">{positionTitle}</Box>
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item style={{ ...marginLeftProps }}>
               <Typography className="text-under" {...subtextProps}>
                 <Box fontWeight="300">
                   {duration}

@@ -31,9 +31,10 @@ const ProjectComponent = () => {
       imageBack: HelpMeFocusBack,
       link: 'https://github.com/felixindrawan/GarudaHacks',
       github: 'https://github.com/felixindrawan/GarudaHacks',
-      desc: 'Tools to aid students focus studying',
+      desc: 'Web app providing tools to aid students focus with studying',
       skill: 'React, JS',
-      type: 'Garuda Hacks, 2020',
+      type: 'Garuda Hacks',
+      time: '2020',
     },
     {
       key: 1,
@@ -42,9 +43,10 @@ const ProjectComponent = () => {
       imageBack: BookListBack,
       link: 'https://github.com/felixindrawan/Book-Dashboard',
       github: 'https://github.com/felixindrawan/Book-Dashboard',
-      desc: 'A web app that displays and adds books through API',
-      skill: 'React, Axios, Redux, JS',
-      type: 'Personal, 2020',
+      desc: 'A web app to add and displays books through an API',
+      skill: 'React, Redux, Axios, JS',
+      type: 'Personal',
+      time: '2020',
     },
     {
       key: 2,
@@ -53,9 +55,11 @@ const ProjectComponent = () => {
       imageBack: GradeCalcBack,
       link: 'https://github.com/felixindrawan/Android-Projects',
       github: 'https://github.com/felixindrawan/Android-Projects',
-      desc: 'An Android app that calculates weight-based grades',
+      desc: 'An Android app calculating weight-based grades and potential marks',
       skill: 'Android Studio, Java',
-      type: 'Personal, 2019',
+      type: 'Personal',
+      time: '2019',
+      styles: { backgroundColor: '#333333' },
     },
   ];
 
@@ -67,17 +71,9 @@ const ProjectComponent = () => {
             Projects
           </Typography>
         </Grid>
-        <Grid
-          container
-          direction="column"
-          item
-          md={12}
-          xs={12}
-          alignItems="center"
-          justify="center"
-        >
+        <Grid container direction="row" item md={12} xs={12} alignItems="center" justify="center">
           {projectsData.map((project) => (
-            <FlipComponent key={project.key} work={project} />
+            <FlipComponent key={project.key} project={project} />
           ))}
         </Grid>
       </Grid>

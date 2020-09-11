@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, animateScroll as scroll } from "react-scroll";
 
 import WelcomeComponent from '../WelcomeComponent';
 import AboutComponent from '../AboutComponent';

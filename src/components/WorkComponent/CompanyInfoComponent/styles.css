@@ -29,13 +29,9 @@ button{
 }
 
 .company-ci-logo{
-  width: 10rem;
+  width: 90%;
   height: auto;
   margin: auto 1rem;
-}
-
-.company-ci-logo-gird{
-  width: 10rem;
 }
 
 button:active {

@@ -23,7 +23,7 @@ const FlipComponent = ({ work }) => {
   };
 
   return (
-    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+    <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
       <CompanyComponent
         onClick={handleClick}
         companyLogo={work.logo}
