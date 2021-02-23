@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
+import RBCBlackHistoryMonthComponent from './components/RBCBlackHistoryMonth';
 import MainComponent from './components/MainComponent';
 
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MainComponent />
+    <BrowserRouter>
+      <Route exact path="/">
+        <MainComponent />
+      </Route>
+      <Route path="/RBCblackhistorymonth">
+        <RBCBlackHistoryMonthComponent />
+      </Route>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
