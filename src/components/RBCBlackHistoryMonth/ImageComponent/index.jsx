@@ -4,7 +4,7 @@ import { Box, Modal, Typography, Grid } from '@material-ui/core';
 import './style.css';
 
 // eslint-disable-next-line react/prop-types
-const ImageComponent = ({ image, imageName }) => {
+const ImageComponent = ({ image, imageName, imageDesc }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -13,10 +13,6 @@ const ImageComponent = ({ image, imageName }) => {
 
   const handleClose = () => {
     setOpen(false);
-  };
-
-  const typographyWidth = {
-    width: '12rem',
   };
 
   return (
@@ -33,12 +29,8 @@ const ImageComponent = ({ image, imageName }) => {
               <img className="leader-image-info" src={image} alt={imageName} />
             </Grid>
             <Grid xs={8} justify="flex-start">
-              <Typography variant="h4" style={typographyWidth}>
-                {imageName}
-              </Typography>
-              <Typography variant="h7" style={typographyWidth}>
-                {imageName}
-              </Typography>
+              <Typography variant="h4">{imageName}</Typography>
+              <Typography variant="h7">{imageDesc}</Typography>
             </Grid>
           </Grid>
         </Grid>
