@@ -43,7 +43,7 @@ const RBCBHM = () => (
     direction="column"
   >
     <Grid container alignItems="center" justify="space-between" style={gridInsideProps}>
-      <Typography variant="h4">INFLUENCIAL BLACK LEADERS IN STEM</Typography>
+      <Typography variant="h4">INFLUENTIAL BLACK LEADERS IN STEM</Typography>
       <Typography variant="h5">THE FUTURE IS NOW</Typography>
     </Grid>
     <Grid container alignItems="center" justify="center" style={gridInsideProps}>
