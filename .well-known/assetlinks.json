@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.example.iademo",
+    "package_name": "com.instantAppFelix.iademo",
     "sha256_cert_fingerprints":
     ["AA:76:3C:CF:70:25:7E:52:89:01:A0:3E:90:23:B7:6D:9B:BD:0F:D3:19:4C:40:59:C8:31:D1:5E:08:48:1A:34"]
   }
