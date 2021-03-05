@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "uninitialized.application.id",
+    "package_name": "com.felixtwopagedemo.TwoPageAppDemo",
     "sha256_cert_fingerprints":
     ["F4:08:BE:7E:16:C1:7B:A6:6F:0B:37:AD:88:52:00:2F:1D:7A:EA:AD:14:51:C8:B7:86:8A:93:18:B4:31:4B:30"]
   }
