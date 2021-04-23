@@ -6,13 +6,13 @@ import { Alert } from '@material-ui/lab';
 import MailIcon from '@material-ui/icons/Mail';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
+// import InstagramIcon from '@material-ui/icons/Instagram';
 import LinksComponent from './LinksComponent';
 import PigeonIcon from '../../assets/ContactsAssets/bird.svg';
 import MailIconPath from '../../assets/ContactsAssets/email.svg';
 import GithubIconPath from '../../assets/ContactsAssets/github.svg';
 import LinkedInIconPath from '../../assets/ContactsAssets/linkedin.svg';
-import InstagramIconPath from '../../assets/ContactsAssets/insta.svg';
+// import InstagramIconPath from '../../assets/ContactsAssets/insta.svg';
 
 import './styles.css';
 
