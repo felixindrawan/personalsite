@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Grid, Typography, Box } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import ContactComponent from '../ContactComponent';
 
 import './styles.css';
