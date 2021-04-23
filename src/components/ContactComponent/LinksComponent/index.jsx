@@ -34,10 +34,10 @@ const LinksComponent = ({ link, category, iconComponent, handleHover }) => {
           target="_blank"
           href={link}
           onMouseEnter={handleHover}
-          style={{ textDecorationColor: '#000000' }}
+          style={{ textDecorationColor: 'black' }}
         >
           <Typography variant="h5">
-            <Box fontWeight="300" color="#000000">
+            <Box fontWeight="300" color="black">
               {category}
             </Box>
           </Typography>

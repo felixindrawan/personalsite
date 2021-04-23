@@ -52,14 +52,6 @@ const ContactComponent = () => {
       iconComponent: <LinkedInIcon fontSize="small" />,
     },
     {
-      key: 3,
-      link: 'https://www.instagram.com/felfelfel.ind',
-      notificationMsg: '@felfelfel.ind',
-      icon: InstagramIconPath,
-      category: 'Instagram',
-      iconComponent: <InstagramIcon fontSize="small" />,
-    },
-    {
       key: 4,
       link: 'https://www.google.com/',
       notificationMsg: 'Under Construction',
@@ -91,22 +83,23 @@ const ContactComponent = () => {
   };
 
   return (
-    <Grid
-      id="contacts"
-      className="contact-page"
-      container
-      spacing={0}
-      alignItems="center"
-      justify="center"
-    >
+    <>
+     {/* <Grid
+       id="contacts"
+       className="contact-page"
+       container
+       spacing={0}
+       alignItems="center"
+       justify="center"
+     > */}
       <Grid container>
-        <Grid item md={12} xs={12}>
+        {/* <Grid item md={12} xs={12}>
           <Box mb={2}>
             <Typography className="text-title" align="center" variant="h4">
               Contact Me
             </Typography>
           </Box>
-        </Grid>
+        </Grid> */}
         <Grid item container md={12} xs={12} justify="center" alignItems="center">
           {contactsData.map((contacts) => (
             <LinksComponent
@@ -138,7 +131,8 @@ const ContactComponent = () => {
           </Typography>
         </Alert>
       </Snackbar>
-    </Grid>
+    {/* </Grid> */}
+    </>
   );
 };
 

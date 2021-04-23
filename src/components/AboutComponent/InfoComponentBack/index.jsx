@@ -33,25 +33,24 @@ const InfoComponent = () => {
       <Grid className="info-grid">
         <Typography {...textProps}>
           <Box fontWeight="300">
-            I'm a student at&nbsp;
+            Loves&nbsp;
             {isSmallScreen && <br />}
-            <span className="text-emphasis">University of Toronto</span>
+            <span className="text-emphasis">Badminton & Pickleball</span>
             ,
           </Box>
         </Typography>
         <Typography {...textProps}>
           <Box fontWeight="300">
-            {!isSmallScreen && 'currently'}
-            &nbsp;specializing in&nbsp;
+            reached&nbsp;
             {isSmallScreen && <br />}
-            <span className="text-emphasis">Computer Science</span>
+            <span className="text-emphasis">Top 15 in Canada 19+</span>
           </Box>
         </Typography>
         <Typography {...textProps}>
           <Box fontWeight="300">
-            and minoring in&nbsp;
+            Also love&nbsp;
             {isSmallScreen && <br />}
-            <span className="text-emphasis">Statistics</span>
+            <span className="text-emphasis">Movies and FPS games</span>
           </Box>
         </Typography>
       </Grid>

@@ -52,7 +52,7 @@ const NavBarComponent = () => {
       </button>
       <button type="button">
         <Box mx={marginChange} my={marginYChange}>
-          <Link offset={0} activeClass="active" to="work" spy smooth duration={500}>
+          <Link offset={-60} activeClass="active" to="work" spy smooth duration={500}>
             <Typography className="text-emphasis" {...linksVariants}>
               <Box fontWeight={300}>WORK</Box>
             </Typography>
@@ -64,15 +64,6 @@ const NavBarComponent = () => {
           <Link offset={-60} activeClass="active" to="projects" spy smooth duration={500}>
             <Typography className="text-emphasis" {...linksVariants}>
               <Box fontWeight={300}>PROJECTS</Box>
-            </Typography>
-          </Link>
-        </Box>
-      </button>
-      <button type="button">
-        <Box mx={marginChange} my={marginYChange}>
-          <Link offset={0} activeClass="active" to="contacts" spy smooth duration={500}>
-            <Typography className="text-emphasis" {...linksVariants}>
-              <Box fontWeight={300}>CONTACTS</Box>
             </Typography>
           </Link>
         </Box>

@@ -4,7 +4,6 @@ import WelcomeComponent from '../WelcomeComponent';
 import NavBarComponent from '../NavBarComponent';
 import AboutComponent from '../AboutComponent';
 import WorkComponent from '../WorkComponent';
-import ContactComponent from '../ContactComponent';
 import ProjectComponent from '../ProjectComponent';
 
 import './styles.css';
@@ -48,8 +47,6 @@ const MainComponent = () => {
       <WorkComponent />
 
       <ProjectComponent />
-
-      <ContactComponent />
     </>
   );
 };

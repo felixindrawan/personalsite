@@ -5,6 +5,7 @@ import { Grid, Typography } from '@material-ui/core';
 import FlipComponent from './FlipComponent';
 import pinnacleLogo from '../../assets/WorkAssets/pinnacle-logo-shadow.png';
 import logicsLogo from '../../assets/WorkAssets/logics-academy-shadow.png';
+import rbcLogo from '../../assets/WorkAssets/Royal-Bank-of-Canada-Logo.png';
 
 import './styles.css';
 
@@ -21,6 +22,16 @@ const WorkComponent = () => {
   const workData = [
     {
       key: 0,
+      logo: rbcLogo,
+      name: 'Royal Bank of Canada',
+      location: 'Toronto, Canada',
+      title: 'Android Developer',
+      desc: 'POC on new Android technology & Crash/Defect fixes',
+      duration: 'Winter 2021',
+      info: 'Android Studio, Java, Play Console',
+    },
+    {
+      key: 1,
       logo: pinnacleLogo,
       name: 'Pinnacle Investment',
       location: 'Jakarta, Indonesia',
@@ -30,7 +41,7 @@ const WorkComponent = () => {
       info: 'React, Redux, PHP, Jest, Cypress',
     },
     {
-      key: 1,
+      key: 2,
       logo: logicsLogo,
       name: 'Logics Academy',
       location: 'Toronto, Canada',

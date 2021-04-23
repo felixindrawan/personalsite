@@ -1,9 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Typography, useMediaQuery } from '@material-ui/core';
+import ReactCardFlip from 'react-card-flip';
 
 import InfoComponent from './InfoComponent';
+import InfoComponentback from './InfoComponentBack';
+
 import profileImg from '../../assets/bald.jpg';
 
 import './styles.css';
@@ -18,6 +21,12 @@ import './styles.css';
  */
 
 const AboutComponent = () => {
+  const [isFlipped, setFlipped] = useState(false);
+
+  const handleClick = () => {
+    setFlipped(!isFlipped);
+  };
+
   const isMediumScreen = useMediaQuery('(max-width:960px)');
   const isSmallScreen = useMediaQuery('(max-width:600px)');
 
@@ -46,16 +55,19 @@ const AboutComponent = () => {
         <Grid item md={5} xs={12} container alignItems="center" {...imageJustifyProps}>
           <img className="profile-img" src={profileImg} alt="Felix" />
         </Grid>
-        <Grid
-          className="text-container"
-          item
-          container
-          alignItems="center"
-          {...textJustifyProps}
-          md={7}
-          xs={12}
-        >
-          <InfoComponent />
+        <Grid item md={7} xs={12} container alignItems="center" {...textJustifyProps}>
+          <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <button type="button" onClick={handleClick}>
+              <Grid item {...textJustifyProps}>
+                <InfoComponent />
+              </Grid>
+            </button>
+            <button type="button" onClick={handleClick}>
+              <Grid item {...textJustifyProps}>
+                <InfoComponentback />
+              </Grid>
+            </button>
+          </ReactCardFlip>
         </Grid>
       </Grid>
     </Grid>

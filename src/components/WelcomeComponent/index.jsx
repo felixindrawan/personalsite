@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Grid, Typography, Box } from '@material-ui/core';
+import ContactComponent from '../ContactComponent';
 
 import './styles.css';
 
@@ -27,9 +28,8 @@ const WelcomeComponent = () => (
         Hi, I'm&nbsp;
         <span className="text-emphasis">Felix</span>
       </Typography>
-      <Typography className="text-under" align="center" variant="h5">
-        <Box fontWeight="300">CS - Stats at UofT</Box>
-      </Typography>
+
+      <ContactComponent />
     </div>
   </Grid>
 );
