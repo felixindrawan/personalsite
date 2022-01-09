@@ -1,13 +1,13 @@
-/* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import './styles.css';
+
 import { Grid, Typography } from '@material-ui/core';
 
+import React from 'react';
 import FlipComponent from './FlipComponent';
 import pinnacleLogo from '../../assets/WorkAssets/pinnacle-logo-shadow.png';
 import logicsLogo from '../../assets/WorkAssets/logics-academy-shadow.png';
 import rbcLogo from '../../assets/WorkAssets/Royal-Bank-of-Canada-Logo.png';
-
-import './styles.css';
+import omersLogo from '../../assets/WorkAssets/OMERS-logo.png';
 
 /**
  * Component listing all my work experience
@@ -22,6 +22,16 @@ const WorkComponent = () => {
   const workData = [
     {
       key: 0,
+      logo: omersLogo,
+      name: 'OMERS',
+      location: 'Toronto, Canada',
+      title: 'Front-End Developer',
+      desc: 'Feature/bug fixes + 5 investment sites released',
+      duration: 'Fall 2021',
+      info: 'React TypeScript, Next.js, Contentful',
+    },
+    {
+      key: 1,
       logo: rbcLogo,
       name: 'Royal Bank of Canada',
       location: 'Toronto, Canada',
@@ -31,7 +41,7 @@ const WorkComponent = () => {
       info: 'Android Studio, Java, Play Console',
     },
     {
-      key: 1,
+      key: 2,
       logo: pinnacleLogo,
       name: 'Pinnacle Investment',
       location: 'Jakarta, Indonesia',
@@ -41,7 +51,7 @@ const WorkComponent = () => {
       info: 'React, Redux, PHP, Jest, Cypress',
     },
     {
-      key: 2,
+      key: 3,
       logo: logicsLogo,
       name: 'Logics Academy',
       location: 'Toronto, Canada',
@@ -51,7 +61,6 @@ const WorkComponent = () => {
       info: 'Adobe Photoshop, Illustrator, Premiere',
     },
   ];
-
   return (
     <Grid
       id="work"

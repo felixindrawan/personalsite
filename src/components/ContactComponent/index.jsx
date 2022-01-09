@@ -1,8 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
-import { Grid, Typography, Box, Avatar, Snackbar, Icon } from '@material-ui/core';
-import { Alert } from '@material-ui/lab';
+import './styles.css';
 
+import { Avatar, Box, Grid, Icon, Snackbar, Typography } from '@material-ui/core';
+import React, { useState } from 'react';
+
+import { Alert } from '@material-ui/lab';
 import MailIcon from '@material-ui/icons/Mail';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -14,8 +15,6 @@ import GithubIconPath from '../../assets/ContactsAssets/github.svg';
 import LinkedInIconPath from '../../assets/ContactsAssets/linkedin.svg';
 // import InstagramIconPath from '../../assets/ContactsAssets/insta.svg';
 
-import './styles.css';
-
 /**
  * Component to contact me
  *
@@ -26,6 +25,10 @@ import './styles.css';
  */
 
 const ContactComponent = () => {
+  const [notificationMsgHook, setNotificationMsgHook] = useState('');
+  const [iconHook, setIconHook] = useState(null);
+  const [openNotification, setOpenNotification] = useState(false);
+
   const contactsData = [
     {
       key: 0,
@@ -52,7 +55,7 @@ const ContactComponent = () => {
       iconComponent: <LinkedInIcon fontSize="small" />,
     },
     {
-      key: 4,
+      key: 3,
       link: 'https://www.google.com/',
       notificationMsg: 'Under Construction',
       icon: PigeonIcon,
@@ -60,10 +63,6 @@ const ContactComponent = () => {
       iconComponent: <img className="pigeon-icon" alt="Pigeon" src={PigeonIcon} />,
     },
   ];
-
-  const [notificationMsgHook, setNotificationMsgHook] = useState('');
-  const [iconHook, setIconHook] = useState(null);
-  const [openNotification, setOpenNotification] = useState(false);
 
   const createIcon = (path) => (
     <Icon>
@@ -84,22 +83,7 @@ const ContactComponent = () => {
 
   return (
     <>
-     {/* <Grid
-       id="contacts"
-       className="contact-page"
-       container
-       spacing={0}
-       alignItems="center"
-       justify="center"
-     > */}
       <Grid container>
-        {/* <Grid item md={12} xs={12}>
-          <Box mb={2}>
-            <Typography className="text-title" align="center" variant="h4">
-              Contact Me
-            </Typography>
-          </Box>
-        </Grid> */}
         <Grid item container md={12} xs={12} justify="center" alignItems="center">
           {contactsData.map((contacts) => (
             <LinksComponent
@@ -131,7 +115,7 @@ const ContactComponent = () => {
           </Typography>
         </Alert>
       </Snackbar>
-    {/* </Grid> */}
+      {/* </Grid> */}
     </>
   );
 };
