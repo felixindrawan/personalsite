@@ -2,9 +2,27 @@ import React from 'react';
 
 export const birthdayData = {
   klp: {
-    name: 'Kevin',
+    name: 'kevin',
     nft: 'KLP',
-    collaborators: ['Felix', 'Darius', 'Matthew', 'Chaniel', 'Jordan', 'Chu', 'William'],
+    shareholders: ['Felix', 'Darius', 'Matthew', 'Chaniel', 'Jordan', 'Chu', 'William'],
+  },
+  vic: {
+    name: 'victor',
+    nft: 'VIC',
+    shareholders: [
+      'Felix',
+      'Caitlin',
+      'Amy',
+      'Winnie',
+      'Nasia',
+      'John',
+      'Nancy',
+      'Nick',
+      'Bryan',
+      'Rachel',
+      'Levina',
+      'Brandon',
+    ],
   },
 };
 

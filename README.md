@@ -16,3 +16,9 @@ npm run build
 npm install netlify-cli -g
 netlify deploy --prod
 ```
+
+### Tutorials used for 3D modeling on Birthday NFTs
+Using Threejs and rendering model
+- https://www.youtube.com/watch?v=wxvSHOrBHbw&t=379s
+Quick commands I used
+- npx gltfjsx {gltf file}

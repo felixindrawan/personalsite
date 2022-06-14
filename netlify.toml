@@ -17,3 +17,8 @@
   from = "/BirthdayNFT/KLPNFT"
   to = "../src/BirthdayNFT/KLPNFT/jsx"
   status=200
+  
+[[redirects]]
+  from = "/BirthdayNFT/VICNFT"
+  to = "../src/BirthdayNFT/VICNFT/jsx"
+  status=200

@@ -7,12 +7,12 @@ import useScrollSnap from 'react-use-scroll-snap';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { birthdayData } from '..';
-import Kevinnft from '../Models/Kevinnft';
+import Vicnft from '../Models/Vicnft';
 
 const CustomNFT = ({
-  name = birthdayData.klp.name,
-  nftName = birthdayData.klp.nft,
-  shareholders = birthdayData.klp.shareholders,
+  name = birthdayData.vic.name,
+  nftName = birthdayData.vic.nft,
+  shareholders = birthdayData.vic.shareholders,
 }) => {
   const containerRef = useRef();
   useScrollSnap({ ref: containerRef, duration: 100 });
@@ -52,7 +52,7 @@ const CustomNFT = ({
           <ambientLight intensity={0.5} />
           <directionalLight position={[-5, 5, 2]} intensity={6} />
           <Suspense fallback={null} r3f>
-            <Kevinnft />
+            <Vicnft />
           </Suspense>
         </Canvas>
         <Grid direction="row">
