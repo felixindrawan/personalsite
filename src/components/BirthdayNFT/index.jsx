@@ -34,7 +34,13 @@ export const birthdayData = {
 
 export const BirthdayNFT = () => {
   return (
-    <Grid container direction="column" style={{ padding: '10px' }}>
+    <Grid
+      container
+      alignItems="center"
+      justifyContent="center"
+      direction="column"
+      style={{ padding: '10px', backgroundColor: '#bea8c7', minHeight: '100vh', width: '100vw' }}
+    >
       <Typography>happy birthday and i hope you have a great year c:</Typography>
       <ul>
         <Typography>nft archives</Typography>
