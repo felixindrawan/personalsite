@@ -10,6 +10,7 @@ import './index.css';
 import { BirthdayNFT } from './components/BirthdayNFT';
 import KLPNFT from './components/BirthdayNFT/KLPNFT';
 import VICNFT from './components/BirthdayNFT/VICNFT';
+import VRGNFT from './components/BirthdayNFT/VRGNFT';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,6 +29,9 @@ ReactDOM.render(
       </Route>
       <Route path="/BirthdayNFT/VICNFT">
         <VICNFT />
+      </Route>
+      <Route path="/BirthdayNFT/VRGNFT">
+        <VRGNFT />
       </Route>
     </BrowserRouter>
   </React.StrictMode>,
