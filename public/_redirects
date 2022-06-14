@@ -2,4 +2,13 @@
 /RBCBlackHistoryMonth /RBCBlackHistoryMonth 200
 /RBCBlackHistoryMonth /RBCBlackHistoryMonth/index.jsx 200
 /RBCBlackHistoryMonth ../src/RBCBlackHistoryMonth/index.jsx 200
+
+/BirthdayNFT /BirthdayNFT 200
+/BirthdayNFT /BirthdayNFT/index.jsx 200
+/BirthdayNFT ../src/BirthdayNFT/index.jsx 200
+
+/BirthdayNFT/KLPNFT /BirthdayNFT/KLPNFT 200
+/BirthdayNFT/KLPNFT /BirthdayNFT/KLPNFT/index.jsx 200
+/BirthdayNFT/KLPNFT ../src/BirthdayNFT/KLPNFT/index.jsx 200
+
 /.well-known/assetlinks.json /.well-known/assetlinks.json

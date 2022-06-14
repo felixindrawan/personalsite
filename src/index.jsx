@@ -7,6 +7,8 @@ import RBCBlackHistoryMonthComponent from './components/RBCBlackHistoryMonth';
 import MainComponent from './components/MainComponent';
 
 import './index.css';
+import { BirthdayNFT } from './components/BirthdayNFT';
+import KLPNFT from './components/BirthdayNFT/KLPNFT';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +18,12 @@ ReactDOM.render(
       </Route>
       <Route path="/RBCblackhistorymonth">
         <RBCBlackHistoryMonthComponent />
+      </Route>
+      <Route exact path="/BirthdayNFT">
+        <BirthdayNFT />
+      </Route>
+      <Route path="/BirthdayNFT/KLPNFT">
+        <KLPNFT />
       </Route>
     </BrowserRouter>
   </React.StrictMode>,

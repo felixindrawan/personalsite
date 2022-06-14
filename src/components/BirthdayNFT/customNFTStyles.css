@@ -1,0 +1,37 @@
+.nft-grid {
+  min-height: 100vh;
+  width: 100vw;
+  padding:2rem;
+}
+
+.slide1 {
+  background-color: #e3dae7;
+}
+.slide2 {
+  background-color: #dacedf;
+}
+.slide3 {
+  background-color: #d0c1d7;
+}
+.slide4 {
+  background-color: #c7b4cf;
+}
+.slide5 {
+  background-color: #bea8c7;
+}
+
+
+.comic-sans {
+  font-family: 'Comic Sans MS' !important;
+} 
+@media (max-width: 600px) {
+  .comic-sans{
+    font-size: larger !important;
+  }
+  .comic-sans.collab{
+    font-size: medium !important;
+  }
+  .comic-sans.names{
+    font-size: small !important;
+  }
+}
