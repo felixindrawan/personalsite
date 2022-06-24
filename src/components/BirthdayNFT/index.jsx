@@ -30,6 +30,11 @@ export const birthdayData = {
     nft: 'VRG',
     shareholders: ['Felix', 'Caitlin', 'John', 'Nick', 'Levina'],
   },
+  chu: {
+    name: 'chu',
+    nft: 'CHU',
+    shareholders: ['Felix', 'Darius', 'Matthew', 'Chaniel', 'Jordan', 'Kevin', 'William'],
+  },
 };
 
 export const BirthdayNFT = () => {
@@ -52,6 +57,9 @@ export const BirthdayNFT = () => {
         </li>
         <li>
           <Link href="/BirthdayNFT/VICNFT">Victor's Birthday (2022)</Link>
+        </li>
+        <li>
+          <Link href="/BirthdayNFT/CHUNFT">Chu's Birthday (2022)</Link>
         </li>
       </ul>
     </Grid>
