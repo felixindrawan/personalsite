@@ -17,6 +17,9 @@ npm install netlify-cli -g
 netlify deploy --prod
 ```
 
+#### Formatting
+```npm run format```
+
 ### Tutorials used for 3D modeling on Birthday NFTs link: /BirthdayNFT
 Using Threejs and rendering model
 - https://www.youtube.com/watch?v=wxvSHOrBHbw&t=379s

@@ -100,11 +100,13 @@ const ProjectBackComponent = ({
                   <LinkRoundedIcon fontSize="large" style={{ ...iconStyle }} />
                 </Box>
               </Link>
-              <Link rel="noopener noreferrer" target="_blank" href={githubLink}>
-                <Box color="#759EFF">
-                  <GithubIcon fontSize="large" style={{ ...iconStyle }} />
-                </Box>
-              </Link>
+              {githubLink && (
+                <Link rel="noopener noreferrer" target="_blank" href={githubLink}>
+                  <Box color="#759EFF">
+                    <GithubIcon fontSize="large" style={{ ...iconStyle }} />
+                  </Box>
+                </Link>
+              )}
             </div>
           </Grid>
           <Grid item xs={12}>

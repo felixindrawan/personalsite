@@ -4,11 +4,6 @@
   status=200
 
 [[redirects]]
-  from = "/RBCBlackHistoryMonth"
-  to = "../src/RBCBlackHistoryMonth/jsx"
-  status=200
-
-[[redirects]]
   from = "/BirthdayNFT"
   to = "../src/BirthdayNFT/jsx"
   status=200

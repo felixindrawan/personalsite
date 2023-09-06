@@ -4,12 +4,12 @@ import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import FlipComponent from './FlipComponent';
 
-import HelpMeFocusFront from '../../assets/ProjectAssets/HelpMeFocusFront.png';
-import HelpMeFocusBack from '../../assets/ProjectAssets/HelpMeFocusBack.png';
 import BookListFront from '../../assets/ProjectAssets/BookListFront.png';
 import BookListBack from '../../assets/ProjectAssets/BookListBack.png';
 import GradeCalcFront from '../../assets/ProjectAssets/GradeCalculatorFront.png';
 import GradeCalcBack from '../../assets/ProjectAssets/GradeCalculatorBack.png';
+import AphroditeFront from '../../assets/ProjectAssets/Aphrodite1.png';
+import AphroditeBack from '../../assets/ProjectAssets/Aphrodite2.png';
 
 import './styles.css';
 
@@ -26,15 +26,14 @@ const ProjectComponent = () => {
   const projectsData = [
     {
       key: 0,
-      name: 'HelpMeFocus',
-      imageFront: HelpMeFocusFront,
-      imageBack: HelpMeFocusBack,
-      link: 'https://github.com/felixindrawan/GarudaHacks',
-      github: 'https://github.com/felixindrawan/GarudaHacks',
-      desc: 'Web app providing tools to aid students focus with studying',
+      name: 'Aphrodite Project',
+      imageFront: AphroditeFront,
+      imageBack: AphroditeBack,
+      link: 'https://aphrodite.global',
+      desc: 'Helping students meet their ideal date (or friend!) from your school!',
       skill: 'React, JS',
-      type: 'Garuda Hacks',
-      time: '2020',
+      type: 'Student-run reocurring digital event',
+      time: '2021',
     },
     {
       key: 1,

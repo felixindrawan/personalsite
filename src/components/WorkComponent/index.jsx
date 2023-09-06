@@ -8,6 +8,7 @@ import pinnacleLogo from '../../assets/WorkAssets/pinnacle-logo-shadow.png';
 import logicsLogo from '../../assets/WorkAssets/logics-academy-shadow.png';
 import rbcLogo from '../../assets/WorkAssets/Royal-Bank-of-Canada-Logo.png';
 import omersLogo from '../../assets/WorkAssets/OMERS-logo.png';
+import certiKLogo from '../../assets/WorkAssets/certiK logo.jpg';
 
 /**
  * Component listing all my work experience
@@ -22,13 +23,23 @@ const WorkComponent = () => {
   const workData = [
     {
       key: 0,
+      logo: certiKLogo,
+      name: 'CertiK',
+      location: 'New York, US',
+      title: 'Full-Stack Developer',
+      desc: 'Developed features for an internal auditing tool',
+      duration: 'June 2022 - May 2023',
+      info: 'React, TypeScript, Next.js, AWS',
+    },
+    {
+      key: 0,
       logo: omersLogo,
       name: 'OMERS',
       location: 'Toronto, Canada',
       title: 'Front-End Developer',
       desc: 'Feature/bug fixes + 5 investment sites released',
-      duration: 'Fall 2021',
-      info: 'React TypeScript, Next.js, Contentful',
+      duration: 'Sept 2021 - May 2022',
+      info: 'React, TypeScript, Next.js, Contentful',
     },
     {
       key: 1,

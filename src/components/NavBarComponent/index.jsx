@@ -1,10 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { Typography, Grid, Box, useMediaQuery } from '@material-ui/core';
+import { Typography, Box, useMediaQuery } from '@material-ui/core';
 import { Link } from 'react-scroll';
 
 import HomeIcon from '@material-ui/icons/Home';
-import './styles.css';
 
 const NavBarComponent = () => {
   const isSmallScreen = useMediaQuery('(max-width:600px)');
@@ -14,15 +13,31 @@ const NavBarComponent = () => {
   };
   const marginChange = isSmallScreen ? 4 : 1;
   const marginYChange = isSmallScreen ? 0 : 1;
-  const mobileOffSetAbout = isSmallScreen ? -50 : 0;
+
+  const navigations = [
+    { to: 'about', text: 'ABOUT' },
+    { to: 'work', text: 'WORK' },
+    { to: 'projects', text: 'PROJECTS' },
+  ];
 
   return (
-    <Grid className="navbar-main" container alignItems="center" justify="center">
+    <div
+      className="navbar-main" // Needed for Navbar to turn sticky
+      style={{
+        display: 'flex',
+        justifyContent: "center",
+        alignItems: 'center',
+        minHeight: '2rem',
+        backgroundColor: '#FAFAFD',
+        zIndex: 1,
+        padding: '0.5rem',
+        boxShadow: '0 1rem 1rem 0 #9B9B9B',
+      }}
+    >
       <button type="button">
         <Box mx={marginChange} my={marginYChange}>
           <Link
             offset={0}
-            className="text-emphasis"
             style={{ color: '#759EFF' }}
             activeClass="active"
             to="home"
@@ -34,41 +49,18 @@ const NavBarComponent = () => {
           </Link>
         </Box>
       </button>
-      <button type="button">
-        <Box mx={marginChange} my={marginYChange}>
-          <Link
-            offset={mobileOffSetAbout}
-            activeClass="active"
-            to="about"
-            spy
-            smooth
-            duration={500}
-          >
-            <Typography className="text-emphasis" {...linksVariants}>
-              <Box fontWeight={300}>ABOUT</Box>
-            </Typography>
-          </Link>
-        </Box>
-      </button>
-      <button type="button">
-        <Box mx={marginChange} my={marginYChange}>
-          <Link offset={-60} activeClass="active" to="work" spy smooth duration={500}>
-            <Typography className="text-emphasis" {...linksVariants}>
-              <Box fontWeight={300}>WORK</Box>
-            </Typography>
-          </Link>
-        </Box>
-      </button>
-      <button type="button">
-        <Box mx={marginChange} my={marginYChange}>
-          <Link offset={-60} activeClass="active" to="projects" spy smooth duration={500}>
-            <Typography className="text-emphasis" {...linksVariants}>
-              <Box fontWeight={300}>PROJECTS</Box>
-            </Typography>
-          </Link>
-        </Box>
-      </button>
-    </Grid>
+      {navigations.map((nav) => (
+        <button type="button">
+          <Box mx={marginChange} my={marginYChange}>
+            <Link offset={-60} activeClass="active" to={nav.to} spy smooth duration={500}>
+              <Typography {...linksVariants} style={{ color: '#759EFF' }}>
+                <Box fontWeight={300}>{nav.text}</Box>
+              </Typography>
+            </Link>
+          </Box>
+        </button>
+      ))}
+    </div>
   );
 };
 

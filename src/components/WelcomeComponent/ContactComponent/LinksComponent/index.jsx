@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Typography, Box, Link } from '@material-ui/core';
+import { Typography, Box, Link } from '@material-ui/core';
 
 import './styles.css';
 /**
@@ -26,24 +26,22 @@ import './styles.css';
 
 const LinksComponent = ({ link, category, iconComponent, handleHover }) => {
   return (
-    <Grid item className="grid-link">
-      <Box alignItems="center" display="inline-flex" m={1}>
-        {iconComponent}
-        <Link
-          rel="noopener noreferrer"
-          target="_blank"
-          href={link}
-          onMouseEnter={handleHover}
-          style={{ textDecorationColor: 'black' }}
-        >
-          <Typography variant="h5">
-            <Box fontWeight="300" color="black">
-              {category}
-            </Box>
-          </Typography>
-        </Link>
-      </Box>
-    </Grid>
+    <div className="grid-link" style={{ display: 'flex', alignItems: 'center', padding: '0 15px' }}>
+      {iconComponent}
+      <Link
+        rel="noopener noreferrer"
+        target="_blank"
+        href={link}
+        onMouseEnter={handleHover}
+        style={{ textDecorationColor: 'black' }}
+      >
+        <Typography variant="h5">
+          <Box fontWeight="300" color="black">
+            {category}
+          </Box>
+        </Typography>
+      </Link>
+    </div>
   );
 };
 

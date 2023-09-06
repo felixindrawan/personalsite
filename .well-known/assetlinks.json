@@ -1,9 +1,12 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.felixtwopagedemo.TwoPageAppDemo",
-    "sha256_cert_fingerprints":
-    ["E3:BC:BA:42:EE:F6:CC:CA:21:5E:89:59:AE:23:2B:3A:1C:31:58:D8:A9:F4:94:67:F2:96:7E:2E:2C:88:57:66"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.felixtwopagedemo.TwoPageAppDemo",
+      "sha256_cert_fingerprints": [
+        "E3:BC:BA:42:EE:F6:CC:CA:21:5E:89:59:AE:23:2B:3A:1C:31:58:D8:A9:F4:94:67:F2:96:7E:2E:2C:88:57:66"
+      ]
+    }
   }
-}]
+]

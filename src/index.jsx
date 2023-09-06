@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { Route, BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
-import RBCBlackHistoryMonthComponent from './components/RBCBlackHistoryMonth';
 import MainComponent from './components/MainComponent';
 
 import './index.css';
@@ -18,9 +17,6 @@ ReactDOM.render(
     <BrowserRouter>
       <Route exact path="/">
         <MainComponent />
-      </Route>
-      <Route path="/RBCblackhistorymonth">
-        <RBCBlackHistoryMonthComponent />
       </Route>
       <Route exact path="/BirthdayNFT">
         <BirthdayNFT />
@@ -39,7 +35,7 @@ ReactDOM.render(
       </Route>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change

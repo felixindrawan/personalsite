@@ -1,19 +1,14 @@
-import './styles.css';
-
-import { Avatar, Box, Grid, Icon, Snackbar, Typography } from '@material-ui/core';
+import { Avatar, Box, Icon, Snackbar, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 
 import { Alert } from '@material-ui/lab';
 import MailIcon from '@material-ui/icons/Mail';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-// import InstagramIcon from '@material-ui/icons/Instagram';
 import LinksComponent from './LinksComponent';
-import PigeonIcon from '../../assets/ContactsAssets/bird.svg';
-import MailIconPath from '../../assets/ContactsAssets/email.svg';
-import GithubIconPath from '../../assets/ContactsAssets/github.svg';
-import LinkedInIconPath from '../../assets/ContactsAssets/linkedin.svg';
-// import InstagramIconPath from '../../assets/ContactsAssets/insta.svg';
+import MailIconPath from '../../../assets/ContactsAssets/email.svg';
+import GithubIconPath from '../../../assets/ContactsAssets/github.svg';
+import LinkedInIconPath from '../../../assets/ContactsAssets/linkedin.svg';
 
 /**
  * Component to contact me
@@ -44,7 +39,7 @@ const ContactComponent = () => {
       notificationMsg: '/felixindrawan',
       icon: GithubIconPath,
       category: 'Github',
-      iconComponent: <GitHubIcon className="github-icon" fontSize="small" />,
+      iconComponent: <GitHubIcon fontSize="small" style={{ marginRight: 3 }} />,
     },
     {
       key: 2,
@@ -53,14 +48,6 @@ const ContactComponent = () => {
       icon: LinkedInIconPath,
       category: 'LinkedIn',
       iconComponent: <LinkedInIcon fontSize="small" />,
-    },
-    {
-      key: 3,
-      link: 'https://www.google.com/',
-      notificationMsg: 'Under Construction',
-      icon: PigeonIcon,
-      category: 'PigeonMail',
-      iconComponent: <img className="pigeon-icon" alt="Pigeon" src={PigeonIcon} />,
     },
   ];
 
@@ -83,22 +70,19 @@ const ContactComponent = () => {
 
   return (
     <>
-      <Grid container>
-        <Grid item container md={12} xs={12} justify="center" alignItems="center">
-          {contactsData.map((contacts) => (
-            <LinksComponent
-              key={contacts.key}
-              link={contacts.link}
-              notificationMsg={contacts.notificationMsg}
-              icon={contacts.icon}
-              category={contacts.category}
-              iconComponent={contacts.iconComponent}
-              handleHover={() => handleHover(contacts.notificationMsg, createIcon(contacts.icon))}
-            />
-          ))}
-        </Grid>
-      </Grid>
-
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {contactsData.map((contacts) => (
+          <LinksComponent
+            key={contacts.key}
+            link={contacts.link}
+            notificationMsg={contacts.notificationMsg}
+            icon={contacts.icon}
+            category={contacts.category}
+            iconComponent={contacts.iconComponent}
+            handleHover={() => handleHover(contacts.notificationMsg, createIcon(contacts.icon))}
+          />
+        ))}
+      </div>
       <Snackbar
         open={openNotification}
         autoHideDuration={4500}
@@ -115,7 +99,6 @@ const ContactComponent = () => {
           </Typography>
         </Alert>
       </Snackbar>
-      {/* </Grid> */}
     </>
   );
 };

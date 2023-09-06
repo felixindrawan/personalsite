@@ -27,35 +27,59 @@ const InfoComponent = () => {
     boxShadow: '0.175rem 0.175rem 1rem 0 #9B9B9B',
     borderRadius: '0.7rem',
   };
+  const skills = [
+    'React',
+    'React Native',
+    'TypeScript',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Java',
+    'AWS',
+    'GCP',
+    'SQL / NoSQL',
+  ];
 
   return (
-    <Box flexDirection="column" className="infoa-box" minHeight="0" {...marginProps}>
-      <Grid className="info-grid">
-        <Typography {...textProps}>
-          <Box fontWeight="300">
-            I'm a student at&nbsp;
-            {isSmallScreen && <br />}
-            <span className="text-emphasis">University of Toronto</span>
-            ,
-          </Box>
-        </Typography>
-        <Typography {...textProps}>
-          <Box fontWeight="300">
-            {!isSmallScreen && 'currently'}
-            &nbsp;specializing in&nbsp;
-            {isSmallScreen && <br />}
-            <span className="text-emphasis">Computer Science</span>
-          </Box>
-        </Typography>
-        <Typography {...textProps}>
-          <Box fontWeight="300">
-            and minoring in&nbsp;
-            {isSmallScreen && <br />}
-            <span className="text-emphasis">Statistics</span>
-          </Box>
-        </Typography>
-      </Grid>
-    </Box>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <Box
+        flexDirection="column"
+        className="infoa-box"
+        minHeight="0"
+        marginBottom={4}
+        {...marginProps}
+      >
+        <Grid className="info-grid">
+          <Typography {...textProps}>
+            <Box fontWeight="300">
+              I'm a graduate from {isSmallScreen && <br />}
+              <span className="text-emphasis">University of Toronto</span>,
+            </Box>
+          </Typography>
+          <Typography {...textProps}>
+            <Box fontWeight="300">
+              specializing in {isSmallScreen && <br />}
+              <span className="text-emphasis">Computer Science</span>.
+            </Box>
+          </Typography>
+        </Grid>
+      </Box>
+      <div>
+        {skills.map((skill) => (
+          <div
+            style={{
+              display: 'inline-block',
+              boxShadow: '0.175rem 0.175rem 1rem 0 #9B9B9B',
+              borderRadius: '0.7rem',
+              padding: 10,
+              margin: '0 0.5rem 1rem ',
+            }}
+          >
+            {skill}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

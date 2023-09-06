@@ -37,15 +37,11 @@ const MainComponent = () => {
   return (
     <>
       <WelcomeComponent />
-
       <div className={`sticky-wrapper${isSticky ? ' sticky' : ''}`} ref={ref}>
         <NavBarComponent />
       </div>
-
       <AboutComponent />
-
       <WorkComponent />
-
       <ProjectComponent />
     </>
   );
